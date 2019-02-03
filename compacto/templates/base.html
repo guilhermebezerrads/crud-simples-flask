@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}{% endblock %} - CRUD simples - Flask</title>
+</head>
+<body>
+
+<ul>
+	<li><a href="{{url_for('criar')}}">Criar</a></li>
+	<li><a href="{{url_for('listar')}}">Listar</a></li>
+</ul>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

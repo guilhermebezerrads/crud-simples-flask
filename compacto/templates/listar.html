@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Listar{% endblock %}
+
+{% block content %}
+
+<h1>Listar tarefas</h1>
+
+<ul>
+	{% for tarefa in tarefas %}
+		<li>{{tarefa.titulo}} | <a href="{{url_for('atualizar', id=tarefa.id)}}">Editar</a> | <a href="{{url_for('excluir', id=tarefa.id)}}">Excluir</a> |</li>
+	{% endfor %}
+</ul>
+
+{% if tarefas|length == 0  %}
+<p>Não existem tarefas criadas.</p>
+{% endif %}
+
+{% endblock %}
