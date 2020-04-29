@@ -16,10 +16,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'da
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+
 Migrate(app, db)
 
-class Tarefa(db.Model):
 
+class Tarefa(db.Model):
 	__tablename__ = 'tarefas'
 
 	id = db.Column(db.Integer, primary_key=True)
